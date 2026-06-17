@@ -1,2 +1,0 @@
-https://0a960087038bad0484d681c300d5000f.web-security-academy.net/my-account?id={ID}
-# ---

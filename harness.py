@@ -5,8 +5,10 @@ from datetime import datetime
 with open("targets.txt") as f:
     TEMPLATES = [l.strip() for l in f if l.strip() and not l.startswith("#")]
 
-my_id    = "wiener"
-test_ids = ["carlos", "peter", "mary"]
+my_id = "wiener"
+
+with open("ids.txt", encoding="utf-8-sig") as f:
+    test_ids = [l.lstrip("\ufeff").strip() for l in f if l.strip()]
 
 log_file = open("idor_log.jsonl", "a", encoding="utf-8")
 def gravar(msg): log_file.write(msg + "\n")
